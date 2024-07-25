@@ -1,0 +1,117 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/discussion_forum.css' %}">
+<div class="discussion-forum">
+    <h1>Welcome to the Discussion Forum!</h1>
+    <div class="search-bar">
+        <input type="text" placeholder="Search all content">
+    </div>
+    <div class="stats">
+        <div>846303 Members</div>
+        <div>2942 Online</div>
+        <div>1033128 Posts</div>
+    </div>
+    <div class="forum-content">
+        <div class="forum-main">
+            <div class="forum-section" data-title="Discussion" data-content="Talk about all things regarding Jobs and your Experiences" data-posts="299957" onclick="openModal(this)">
+                <h2>Discussion</h2>
+                <p>Talk about all things regarding Jobs and your Experiences</p>
+                <p>299957 Posts | 12m Ago</p>
+            </div>
+            <div class="forum-section" data-title="Feedback On My Store" data-content="Showcase your shop and get feedback from the community. Before posting please review our guidelines" data-posts="98975" onclick="openModal(this)">
+                <h2>Feedback On My Store</h2>
+                <p>Showcase your shop and get feedback from the community. Before posting please review our guidelines</p>
+                <p>98975 Posts | 17m Ago</p>
+            </div>
+            <div class="forum-section" data-title="Shopify Design" data-content="Shopify Themes, liquid, logos and similar topics" data-posts="203856" onclick="openModal(this)">
+                <h2>Shopify Design</h2>
+                <p>Shopify Themes, liquid, logos and similar topics</p>
+                <p>203856 Posts | 3m Ago</p>
+            </div>
+            <div class="forum-section" data-title="Shopify Apps" data-content="Discussion about Shopify apps and their usage" data-posts="104857" onclick="openModal(this)">
+                <h2>Shopify Apps</h2>
+                <p>Discussion about Shopify apps and their usage</p>
+                <p>104857 Posts | 1h Ago</p>
+            </div>
+        </div>
+        <div class="forum-sidebar">
+            <div class="sidebar-section">
+                <h3>Welcome to the Community!</h3>
+                <p>Sign up and join the conversation!</p>
+            </div>
+            <div class="sidebar-section">
+                <h3>Important Links</h3>
+                <ul>
+                    <li><a href="#">Announcements</a></li>
+                    <li><a href="#">Shopify Events</a></li>
+                    <li><a href="#">All Unanswered Topics</a></li>
+                    <li><a href="#">Community Guidelines</a></li>
+                    <li><a href="#">Code of Conduct</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Help</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Template -->
+<div id="postModal" class="modal">
+    <div class="modal-content">
+        <span class="close-btn" onclick="closeModal()">&times;</span>
+        <h2 id="modal-title"></h2>
+        <div id="modal-content"></div>
+        <div id="comments-list"></div>
+        <textarea id="comment" placeholder="Add a comment"></textarea>
+        <button onclick="submitComment()">Submit Comment</button>
+    </div>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const modal = document.getElementById("postModal");
+    
+    window.openModal = function(section) {
+        const title = section.getAttribute("data-title");
+        const content = section.getAttribute("data-content");
+        const posts = section.getAttribute("data-posts");
+
+        document.getElementById("modal-title").innerText = title;
+        document.getElementById("modal-content").innerText = content;
+        const commentsSection = document.getElementById("comments-list");
+        
+        // Add some mock comments for demonstration
+        commentsSection.innerHTML = `
+            <p><strong>Comment 1:</strong> This is a great topic!</p>
+            <p><strong>Comment 2:</strong> I have some insights to share.</p>
+        `;
+        
+        modal.style.display = "block";
+    };
+
+    window.closeModal = function() {
+        modal.style.display = "none";
+    };
+    
+    window.submitComment = function() {
+        const commentText = document.getElementById("comment").value;
+        if (commentText) {
+            const newComment = document.createElement("p");
+            newComment.innerHTML = `<strong>You:</strong> ${commentText}`;
+            document.getElementById("comments-list").appendChild(newComment);
+            document.getElementById("comment").value = "";
+        }
+    };
+    
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    };
+});
+</script>
+{% endblock %}

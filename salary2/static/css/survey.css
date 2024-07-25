@@ -1,0 +1,64 @@
+.survey-container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    text-align: center;
+}
+
+.survey-container h1 {
+    margin-bottom: 20px;
+}
+
+.survey-container label {
+    display: block;
+    margin-top: 15px;
+    text-align: left;
+}
+
+.survey-container input[type="text"],
+.survey-container textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.slider-container {
+    margin-top: 10px;
+    position: relative;
+}
+
+.slider-container input[type="range"] {
+    width: 100%;
+}
+
+.slider-value {
+    position: absolute;
+    top: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 16px;
+    background: #2c5f2d;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.survey-container button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #2c5f2d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.survey-container button:hover {
+    background-color: #1e3e1b;
+}

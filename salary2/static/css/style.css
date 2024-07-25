@@ -1,0 +1,160 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    color: #333;
+}
+
+.navbar {
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar-brand {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #333;
+}
+
+.navbar-nav {
+    list-style: none;
+    padding: 0;
+    display: flex;
+}
+
+.navbar-nav li {
+    margin-right: 15px;
+}
+
+.navbar-nav li a {
+    color: #333;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: inline-block;
+    transition: background-color 0.3s;
+}
+
+.navbar-nav li a:hover {
+    background-color: #f0f0f0;
+    border-radius: 5px;
+}
+
+.login-button {
+    color: #333;
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.login-button:hover {
+    background-color: #e0e0e0;
+}
+
+.hero-section {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.hero-section h1 {
+    font-size: 2.5em;
+    color: #2c5f2d;
+    margin-bottom: 20px;
+}
+
+.hero-section p {
+    font-size: 1em;
+    margin-bottom: 30px;
+}
+
+.social-login {
+    display: block;
+    padding: 10px 20px;
+    font-size: 1em;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px auto;
+    width: 250px;
+    max-width: 100%;
+}
+
+.google {
+    background-color: #4285F4;
+}
+
+.facebook {
+    background-color: #3b5998;
+}
+
+.hero-section form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.hero-section input[type="email"] {
+    padding: 10px;
+    font-size: 1em;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 300px;
+    max-width: 100%;
+}
+
+.error-message {
+    color: red;
+    font-size: 0.9em;
+    margin-bottom: 10px;
+}
+
+.hero-section button[type="submit"] {
+    padding: 10px 20px;
+    font-size: 1em;
+    color: #fff;
+    background-color: #2c5f2d;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.hero-section button[type="submit"]:hover {
+    background-color: #1e3e1b;
+}
+
+.hero-image {
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px;
+}
+
+.hero-section a {
+    color: #2c5f2d;
+    text-decoration: none;
+}
+
+.hero-section a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}

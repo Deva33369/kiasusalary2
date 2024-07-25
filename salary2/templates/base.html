@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KiaSu SalaryMan 2</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-brand">KiaSu SalaryMan 2</div>
+        <ul class="navbar-nav">
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <li><a href="{% url 'discussion_forum' %}">Discussion Forum</a></li>
+            <li><a href="{% url 'infographic' %}">Infographic</a></li>
+            <li><a href="{% url 'survey' %}">Survey</a></li>
+        </ul>
+        <a class="login-button" href="#">Login</a>
+    </nav>
+    <div class="content">
+        {% block content %}
+        {% endblock %}
+    </div>
+    {% comment %} <footer>
+        &copy; 2024 KiaSu SalaryMan 2. All Rights Reserved.
+    </footer> {% endcomment %}
+</body>
+</html>

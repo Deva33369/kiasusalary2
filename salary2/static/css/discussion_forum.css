@@ -1,0 +1,161 @@
+/* Base Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+.discussion-forum {
+    text-align: center;
+    padding: 20px;
+}
+
+.search-bar {
+    margin: 20px 0;
+}
+
+.search-bar input {
+    width: 60%;
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.stats {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+    font-size: 1.2em;
+    color: #555;
+}
+
+.forum-content {
+    display: flex;
+    justify-content: center;
+}
+
+.forum-main {
+    width: 70%;
+    padding: 20px;
+}
+
+.forum-section {
+    background-color: #fff;
+    padding: 20px;
+    margin: 10px 0;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.forum-section:hover {
+    background-color: #f0f0f0;
+}
+
+.forum-sidebar {
+    width: 25%;
+    padding: 20px;
+}
+
+.sidebar-section {
+    background-color: #fff;
+    padding: 20px;
+    margin: 10px 0;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.sidebar-section h3 {
+    margin-top: 0;
+}
+
+.sidebar-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar-section ul li {
+    margin: 10px 0;
+}
+
+.sidebar-section ul li a {
+    text-decoration: none;
+    color: #2c5f2d;
+}
+
+.sidebar-section ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Modal Styles */
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 10% auto;  /* Adjust the top margin if needed */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 90%;  /* Increased the width */
+    max-width: 700px;  /* Adjusted the max-width */
+    height: 70%;  /* Added height */
+    max-height: 80%;  /* Added max-height */
+    overflow-y: auto;  /* Enable vertical scrolling if content overflows */
+}
+
+.close-btn {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#comments-list {
+    margin-top: 20px;
+    max-height: 150px;
+    overflow-y: auto;
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+
+#comment {
+    width: calc(100% - 20px);
+    margin-top: 10px;
+    padding: 10px;
+}
+
+button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}

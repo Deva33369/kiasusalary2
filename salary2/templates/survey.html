@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/survey.css' %}">
+<div class="survey-container">
+    <h1>Survey</h1>
+    <p>We would love to hear your feedback about our website!</p>
+    <form id="survey-form">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+
+        <label for="feedback">Feedback:</label>
+        <textarea id="feedback" name="feedback" rows="4" required></textarea>
+
+        <label for="rating">Rating:</label>
+        <div class="slider-container">
+            <input type="range" id="rating" name="rating" min="0" max="10" step="1">
+            <div class="slider-value" id="slider-value">5</div>
+        </div>
+
+        <button type="submit">Submit</button>
+    </form>
+</div>
+<script src="{% static 'js/survey.js' %}"></script>
+{% endblock %}
